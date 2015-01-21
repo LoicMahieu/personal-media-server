@@ -28,10 +28,10 @@ docker run \
 ```
 docker run \
   --rm \
-  -v /home/loic/Owncloud/data:/owncloud/data \
+  -v /home/loic/owncloud:/owncloud \
   -t loicmahieu/owncloudcmd \
   --trust \
-  /owncloud/data \
+  /owncloud \
   ownclouds://loic:password@192.168.1.102/owncloud/remote.php/webdav
 ```
 

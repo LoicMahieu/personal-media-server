@@ -1,0 +1,7 @@
+
+rsync \
+  -avP \
+  -e ssh \
+  --exclude='.DS_Store' \
+  "/Volumes/Data HD/Videos/Séries/" \
+  loic@larzhome-local:/media/larzdata/Videos/TVShows/

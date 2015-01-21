@@ -1,0 +1,7 @@
+docker run \
+  --name='sickbeard' \
+  -d \
+  -v /media/larzdata/lib/sickbeard:/config \
+  -v /media/larzdata/Videos:/data \
+  -p 8081:8081 \
+  timhaak/sickbeard

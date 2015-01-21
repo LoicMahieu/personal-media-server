@@ -19,22 +19,20 @@ docker pull loicmahieu/owncloudcmd
 ```
 docker run \
   --rm \
-  -t owncloudcmd \
+  -t loicmahieu/owncloudcmd \
   [OPTION] \
   <source_dir> \
   <server_url>
 ```
 
-
 ```
 docker run \
   --rm \
-  -v /home/loic/Owncloud/config:/owncloud/config \
-  -v /home/loic/Owncloud/data:/owncloud/config \
-  -t owncloudcmd \
-  --config /owncloud/config/owncloud.cfg \
-  <source_dir> \
-  ownclouds://loic:password123@my.cloud.url.com/remote.php/webdav
+  -v /home/loic/Owncloud/data:/owncloud/data \
+  -t loicmahieu/owncloudcmd \
+  --trust \
+  /owncloud/data \
+  ownclouds://loic:password@192.168.1.102/owncloud/remote.php/webdav
 ```
 
 # webdav

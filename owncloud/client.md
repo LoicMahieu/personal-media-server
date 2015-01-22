@@ -35,6 +35,37 @@ docker run \
   ownclouds://loic:password@192.168.1.102/owncloud/remote.php/webdav
 ```
 
+### Mac
+```
+# not work
+docker run \
+  --rm \
+  -v /Volumes/Data\ HD/owncloud:/owncloud \
+  -t loicmahieu/owncloudcmd \
+  --trust \
+  /owncloud \
+  ownclouds://loic:password@loic-home.igloo.be:14723/owncloud/remote.php/webdav
+
+# bug
+docker run \
+  --rm \
+  -v /Users/loicmahieu/ownCloudPersonal:/owncloud \
+  -t loicmahieu/owncloudcmd \
+  --trust \
+  /owncloud \
+  ownclouds://loic:password@192.168.1.102/owncloud/remote.php/webdav
+```
+```
+# works on `boot2docker ssh`
+docker run \
+  --rm \
+  -v /home/docker/owncloud:/owncloud \
+  -t loicmahieu/owncloudcmd \
+  --trust \
+  /owncloud \
+  ownclouds://loic:password@192.168.1.102/owncloud/remote.php/webdav
+```
+
 # webdav
 
 http://doc.owncloud.org/server/7.0/user_manual/files/files.html

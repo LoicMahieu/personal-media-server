@@ -1,0 +1,11 @@
+
+docker run \
+  -d \
+  -p 12345:12345 \
+  -p 12345:12345/udp \
+  -p 9091:9091 \
+  -e ADMIN_PASS=password \
+  -v /media/larzdata/var/transmission/downloads:/var/lib/transmission-daemon/downloads \
+  -v /media/larzdata/var/transmission/incomplete:/var/lib/transmission-daemon/incomplete \
+  --name transmission \
+  elventear/transmission

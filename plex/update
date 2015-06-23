@@ -3,3 +3,4 @@ docker pull timhaak/plex:latest
 docker stop plex-latest
 docker rm plex-latest
 ./run
+

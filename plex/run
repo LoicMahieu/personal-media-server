@@ -3,7 +3,7 @@ docker run \
   --name='plex-latest' \
   -d \
   --net="host" \
-  -v /media/larzdata/Plex/config:/config \
-  -v /media/larzdata/Videos:/data \
+  -v /home/loic/var/plex/config:/config \
+  -v /media/larzdata/Videos:/data:ro \
   -p 32400:32400 \
   timhaak/plex

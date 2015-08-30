@@ -17,7 +17,14 @@ docker run --volumes-from $OVPN_DATA --rm -it kylemanna/openvpn ovpn_initpki
 
 # Run server
 ```
-docker run --name $OVPN_SERVER --volumes-from $OVPN_DATA -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn
+docker run \
+  --name $OVPN_SERVER \
+  --volumes-from $OVPN_DATA \
+  -d \
+  -p 1194:1194/udp \
+  --cap-add=NET_ADMIN \
+  --restart="always" \
+  kylemanna/openvpn
 ```
 
 # create client without password

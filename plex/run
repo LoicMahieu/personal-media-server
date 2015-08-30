@@ -4,6 +4,7 @@ docker run \
   -d \
   --net="host" \
   -v /home/loic/var/plex/config:/config \
-  -v /media/larzdata/Videos:/data:ro \
+  -v /media/larzdata-extend/Videos:/data:ro \
+  -v /media/larzdata-extend/Music:/music:ro  \
   -p 32400:32400 \
   timhaak/plex

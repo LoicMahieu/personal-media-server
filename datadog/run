@@ -1,0 +1,12 @@
+
+docker run \
+  -d \
+  --name dd-agent \
+  -h `hostname` \
+  --restart="always" \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v /proc/mounts:/host/proc/mounts:ro \
+  -v /sys/fs/cgroup/:/host/sys/fs/cgroup:ro \
+  -e API_KEY=$API_KEY \
+  datadog/docker-dd-agent
+

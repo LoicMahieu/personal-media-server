@@ -1,0 +1,12 @@
+
+docker run -it \
+    --name='docktorrent' \
+    -d \
+    --restart="always" \
+    -p 8100:80 -p 45566:45566 -p 9527:9527/udp \
+    --dns 8.8.8.8 \
+    -v /media/larzdata-extend/var/docktorrent:/rtorrent \
+    -e UPLOAD_RATE=1024 \
+    -e AUTH_OFF=192.168.1.0/24 \
+    kfei/docktorrent
+

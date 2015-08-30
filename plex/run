@@ -7,4 +7,5 @@ docker run \
   -v /media/larzdata-extend/Videos:/data:ro \
   -v /media/larzdata-extend/Music:/music:ro  \
   -p 32400:32400 \
+  --restart="always" \
   timhaak/plex
